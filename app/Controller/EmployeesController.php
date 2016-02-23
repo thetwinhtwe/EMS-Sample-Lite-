@@ -16,6 +16,15 @@ class EmployeesController extends AppController {
 	public $components = array('Paginator');
 
 /**
+ * workbench method
+ *
+ * @return void
+ */
+	public function workbench() {
+
+	}
+
+/**
  * index method
  *
  * @return void
