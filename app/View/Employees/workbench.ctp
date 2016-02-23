@@ -26,6 +26,8 @@
                 );
                     ?>
                         </div>
+                        <div class="row visible-xs">
+                        </div>
                          <div class="col-xs-6 col-md-6">
                           <?php
                         echo $this->Html->link(
@@ -61,6 +63,8 @@
                 );
                     ?>
 
+                        </div>
+                         <div class="row visible-xs">
                         </div>
                          <div class="col-xs-6 col-md-6">
                           <?php

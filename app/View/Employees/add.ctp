@@ -13,15 +13,29 @@
   <div class="panel-body">
  
   <div class="container-fluid">
-<div class="col-sm-12 form-group">
-<?php echo $this->Form->create('Employee'); ?>
+<?php echo $this->Form->create('Employee', array(
+'class' => 'form-horizontal',
+'role'=>'form',
+'inputDefaults' => array(
+    'format' => array('before', 'label', 'between', 'input', 'error', 'after'),
+    'div' => array('class' => 'form-group'),
+    'class' => array('form-control'),
+    'label' => array('class' => 'col-lg-4 col-md-4 col-xs-12 col-sm-12 control-label'),
+    'between' => '<div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">',
+    'after' => '</div>',
+    'error' => array('attributes' => array('wrap' => 'span', 'class' => 'help-inline')),
+)));
+ ?>
 	<?php
-		echo $this->Form->input('name', array(
+		echo $this->Form->input('name',
+			array(
     			'label' => array('class' => 'col-sm-4 control-label','text'=>'Name')
 				));
+				?>
+		<?php
 		//echo $this->Form->input('name');
 		echo $this->Form->input('mobile_no', array(
-    			'label' => array('class' => 'col-sm-4 control-label','tel'=>'Mobile Number')
+    			'label' => array('class' => 'col-sm-4 control-label','text'=>'Mobile Number')
 				));
 		//echo $this->Form->input('mobile_no');
 		echo $this->Form->input('email', array(
@@ -51,8 +65,15 @@
 				));
 		//echo $this->Form->input('address');
 	?>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
+<?php 
+$options = array(
+    'label' => 'Add',
+    'div' => array(
+        'class' => 'pull-right',
+    )
+);
+echo $this->Form->end($options); ?>
+
 
 
 

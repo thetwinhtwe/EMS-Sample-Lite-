@@ -70,7 +70,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div id="content">
 			<h1 class="text-danger">Hello World</h1> 
 		-->
+			<center>
 			<?php echo $this->Flash->render(); ?>
+			</center>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
