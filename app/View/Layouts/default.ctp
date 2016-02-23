@@ -30,9 +30,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
-		echo $this->Html->css('bootstrap.min');
-		echo $this->Html->css('stylesheet');
+		//echo $this->Html->css('cake.generic');
+		//echo $this->Html->css('bootstrap.min');
+		//echo $this->Html->css('stylesheet');
+		echo $this->Html->css(array('bootstrap.min', 'stylesheet'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -46,7 +47,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
   <div class="navbar navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.php">Employee Management System</a>
+          <!-- <a class="navbar-brand" href="index.php">Employee Management System</a> -->
+          <?php
+		    echo $this->Html->link(
+		    'Employee Management System',
+		    array(
+		        'controller' => 'employees',
+		        'action' => 'workbench'
+		    ),
+		    array(
+		    	'class'=>'navbar-brand'
+		    	)
+);
+		?>
         </div>
       </div>              
     </div>

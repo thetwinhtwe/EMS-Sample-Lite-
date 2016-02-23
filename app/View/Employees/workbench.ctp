@@ -10,21 +10,73 @@
                     <div class="row">
                     	<div class="col-md-12 col-xs-12">
                         <div class="col-xs-6 col-md-6">
-                          <a href="employees/add" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-plus"></span> <br/>Add Employee</a>
+                         
+                  <?php
+
+                        echo $this->Html->link(
+                        ' Add Employee',
+                        array(
+                            'controller' => 'employees',
+                            'action' => 'add'
+                        ),
+                        array(
+                          'class'=>'btn btn-primary btn-lg glyphicon glyphicon-plus'
+                          )
+
+                );
+                    ?>
                         </div>
                          <div class="col-xs-6 col-md-6">
-                          <a href="employees/index" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-th-list"></span> <br/>Employee List</a>
+                          <?php
+                        echo $this->Html->link(
+                        ' Employee List',
+                        array(
+                            'controller' => 'employees',
+                            'action' => 'index'
+                        ),
+                        array(
+                          'class'=>'btn btn-success btn-lg glyphicon glyphicon-th-list'
+                          )
+
+                );
+                    ?>
 
                         </div>
                      </div>
                  </div>
-				<div class="row">
+				              <div class="row">
                     	<div class="col-md-12 col-xs-12">
                         <div class="col-xs-6 col-md-6">
-                          <a href="#" class="btn btn-warning btn-lg disabled" role="button"><span class="glyphicon glyphicon-book"></span> <br/>Work Report</a>
+                          <?php
+                        echo $this->Html->link(
+                        ' Work Report',
+                        array(
+                            'controller' => 'employees',
+                            'action' => 'report'
+                        ),
+                        array(
+                          'class'=>'btn btn-warning btn-lg disabled glyphicon glyphicon-book'
+                          )
+
+                );
+                    ?>
+
                         </div>
                          <div class="col-xs-6 col-md-6">
-                          <a href="#" class="btn btn-info btn-lg disabled" role="button"><span class="glyphicon glyphicon-envelope"></span> <br/>Leave Request</a>
+                          <?php
+                        echo $this->Html->link(
+                        ' Leave request',
+                        array(
+                            'controller' => 'employees',
+                            'action' => 'leave'
+                        ),
+                        array(
+                          'class'=>'btn btn-info btn-lg disabled glyphicon glyphicon-envelope'
+                          )
+
+                );
+                    ?>
+
                         </div>
                      </div>
                  </div>
