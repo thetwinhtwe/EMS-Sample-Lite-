@@ -40,13 +40,23 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?//php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-		<!--	<h1 class="text-danger">Hello World</h1> -->
 
+	<div id="container">
+			<div class="row header">
+  <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.php">Employee Management System</a>
+        </div>
+      </div>              
+    </div>
+  </div> <!-- end row of menu -->
+		<!--	<div id="header">
+			<h1><?//php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			</div>
+			<div id="content">
+			<h1 class="text-danger">Hello World</h1> 
+		-->
 			<?php echo $this->Flash->render(); ?>
 
 			<?php echo $this->fetch('content'); ?>
