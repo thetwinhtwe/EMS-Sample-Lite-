@@ -42,9 +42,16 @@
     			'label' => array('class' => 'col-sm-4 control-label','email'=>'Email')
 				));
 		//echo $this->Form->input('email');
-		echo $this->Form->input('gender', array(
+		/*echo $this->Form->input('gender', array(
     			'label' => array('class' => 'col-sm-4 control-label','text'=>'Gender')
-				));
+				));*/
+        $gender = ['M' => 'Male', 'F' => 'Female'];
+        echo $this->Form->input('gender', array(
+    'type' => 'select', 
+    'options' => $gender,
+    'label' => array('class' => 'col-sm-4 control-label',
+    'text'=>'Gender'))
+);
 		//echo $this->Form->input('gender');
 		echo $this->Form->input('dob', array(
 				'label' => 'Date of birth',
